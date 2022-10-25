@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Task Generator</title>
+    <style>
+     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+    </style>
+
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .container{
+        margin: 20px;
+    }
+    .container01{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+
+    }
+    .row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+    .con-01{
+    background: white;
+    position: relative;
+    flex: 1;
+    max-width: 300px;
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    .con-02{
+    background: white;
+    position: relative;
+    flex: 1;
+    max-width: 300px;
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    #todo{
+        margin-left: 20px;
+        height: 28px;
+        width: 300px;
+    }
+    .btn{
+        margin-top: 50px;
+    }
+    #generate{
+        width: 140px;
+        height: 30px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+    }
+    #generate:hover{
+        background-color: white;
+        color: black;
+        transition: .5s ease;
+        cursor: pointer;
+        border: none;
+    }
+    #add{
+        height: 28px;
+        width: 38px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+    }
+    #add:hover{
+        background-color: white;
+        color: black;
+        transition: .5s ease;
+        cursor: pointer;
+        border: none;
+    }
+
+    #items{
+        margin: 20px;
+        padding: 10px;
+    }
+   li{
+    list-style: none;
+   }
+   
+  </style>
+</head>
+<body>
+    <center>
+    <div class="btn">
+        <button type="submit" class="add-button" id="generate" style="font-size: 20px;" onclick="newTaskGenerate()"><b>Generate</b></button>
+    </div>
+    </center>
+      
+    <div class="container01">
+        <h1>Todo</h1>
+        <form class="todo-form" >
+          <input type="text" class="todo-input" id="todo" placeholder="Add a Todo...">
+          <button type="submit" class="add-button" id="add">Add</button>
+        </form>
+        <br>
+        
+    </div>
+    <center>
+        <ul class="todo-items" id="items">
+            
+            <li class="item" data-key="1594003133171">
+            <input class="checkbox" type="checkbox">
+            Go to Gym
+            <button class="delete-button" id="xbtn">X</button>
+            </li>
+        </ul>
+    </center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="con-01">
+                <h3>Task 1</h3><br>
+                <p id="userId"></p><br>
+                <p id="id"></p><br>
+                <p id="title"></p><br>
+                <p id="completed"></p><br>
+            </div>
+        
+            <div class="con-01">
+                <h3>Task 2</h3><br>
+                <p id="userId1"></p> <br>
+                <p id="id1"></p> <br>
+                <p id="title1"></p><br>
+                <p id="completed1"></p><br>
+            </div>
+        
+            <div class="con-01">
+                <h3>Task 3</h3><br>
+                <p id="userId2"></p> <br>
+                <p id="id2"></p> <br>
+                <p id="title2"></p><br>
+                <p id="completed2"></p><br>
+            </div>
+        
+
+            <div class="con-01">
+                <h3>Task 4</h3><br>
+                <p id="userId3"></p> <br>
+                <p id="id3"></p> <br>
+                <p id="title3"></p><br>
+                <p id="completed3"></p><br>
+            </div>
+        
+
+            <div class="con-01">
+                <h3>Task 5</h3><br>
+                <p id="userId4"></p> <br>
+                <p id="id4"></p> <br>
+                <p id="title4"></p><br>
+                <p id="completed4"></p><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="con-02">
+                <h3>Task 6</h3><br>
+                <p id="userId5"></p> <br>
+                <p id="id5"></p> <br>
+                <p id="title5"></p><br>
+                <p id="completed5"></p><br>
+            </div>
+
+            <div class="con-02">
+                <h3>Task 7</h3><br>
+                <p id="userId6"></p> <br>
+                <p id="id6"></p> <br>
+                <p id="title6"></p><br>
+                <p id="completed6"></p><br>
+            </div>
+
+            <div class="con-02">
+                <h3>Task 8</h3><br>
+                <p id="userId7"></p> <br>
+                <p id="id7"></p> <br>
+                <p id="title7"></p><br>
+                <p id="completed7"></p><br>
+            </div>
+
+            <div class="con-02">
+                <h3>Task 9</h3><br>                 
+                <p id="userId8"></p> <br>
+                <p id="id8"></p> <br>
+                <p id="title8"></p><br>
+                <p id="completed8"></p><br>
+            </div>
+        </div>
+    </div>
+
+      
+
+    <script src="random.js"></script>
+</body>
+</html>
+</body>
+</html>
